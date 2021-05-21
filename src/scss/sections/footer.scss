@@ -1,0 +1,123 @@
+/* === BEGIN FOOTER SCSS === */
+.footer__title {
+  font-family: 'gotham-bold';
+  font-size: $font-size-l;
+  line-height: $font-size-l;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.footer {
+  background-color: $background-primary;
+  padding: 45px 0 30px;
+}
+
+.newsletter {
+  padding-top: 6px;
+}
+
+.footer__column {
+  margin-bottom: 30px;
+}
+
+.footer__links {
+  li {
+    margin-bottom: 3px;
+  }
+
+  .footer__link {
+    color: $body_color;
+  }
+}
+
+.footer__top {
+  .footer__link {
+    text-transform: capitalize;
+  }
+}
+
+.footer__bottom {
+  text-align: center;
+  padding: 30px 0;
+
+  .footer__link {
+    font-size: $font-size-s;
+  }
+
+  .footer__links {
+    li {
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &+li {
+        position: relative;
+        padding-left: 14px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 50%; 
+          left: 0px;
+          width: 2px;
+          height: 12px;
+          background-color: #a3a3a3;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}
+
+.input-group {
+  @include flexbox();
+  @include align-items(center);
+  width: 100%;
+
+  .input-group__field {
+    font-size: $font-size-l;
+    line-height: $font-size-l + 10;
+    padding: 9px 12px 8px;
+    background-color: $btn-secondary--bg;
+    color: $btn-secondary--color;
+    border: 1px solid $btn-secondary--border-color;
+    outline: none;
+    -ms-flex: 0 0 calc(100% - 54px);
+    flex: 0 0 calc(100% - 54px);
+    max-width: 487px;
+  }
+
+  .input-group__submit {
+    width: 50px;
+    margin-left: 4px;
+
+  }
+}
+
+.social-media {
+  margin-top: 28px;
+}
+
+.social-media__item {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  margin: 0 10px 10px 0;
+}
+
+.social-media__link {
+  display: block;
+  color: $body_color;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .input-group {
+    .input-group__field {
+      width: 487px;
+      padding: 12px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mixin menu(className, menu_items, navLinkClass='nav__link')
+  ul.list--unstyled(class=className)
+    each top_item in menu_items
+      li
+        a(class= navLinkClass)(href= top_item.link, class= title.toLowerCase() == top_item.title.toLowerCase() ? 'is-active' : '')= top_item.title
+
+mixin banner-item(image, heading, subheading)
+  .banner-item 
+    a(href="#", title="banner")
+      img.banner-image(alt="banner", src=image)
+    if heading
+      .banner-content 
+        h3.banner__heading= heading
+        if subheading
+          h3.banner__sub-heading= subheading

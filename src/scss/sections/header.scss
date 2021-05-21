@@ -1,0 +1,35 @@
+/* === BEGIN HEADER SCSS === */
+.nav__link {
+  display: inline-block;
+  font-size: $font-size-m;
+  color: $body_color;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.main-nav__links {
+  > li {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+  .header {
+    top: 3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 2;
+  }
+}

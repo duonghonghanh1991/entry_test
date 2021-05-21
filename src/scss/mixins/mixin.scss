@@ -1,0 +1,163 @@
+/* === BEGIN MIXINS SCSS === */
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+@mixin scaleX($scale) {
+  @include transform(scaleX($scale));
+}
+
+@mixin scaleY($scale) {
+  @include transform(scaleY($scale));
+}
+
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin translateX($x) {
+  @include transform(translateX($x));
+}
+
+@mixin translateY($y) {
+  @include transform(translateY($y));
+}
+
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin ($origin) {
+moz-transform-origin: $origin;
+-o-transform-origin: $origin;
+-ms-transform-origin: $origin;
+-webkit-transform-origin: $origin;
+transform-origin: $origin;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-delay($time) {
+  transition-delay: $time;
+  -moz-transition-delay: $time;
+  -webkit-transition-delay: $time;
+  -o-transition-delay: $time;
+  -ms-transition-delay: $time;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+  } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin justify-content($justify) {
+  -webkit-box-pack: $justify;
+  -moz-box-pack: $justify;
+  -ms-flex-pack: $justify;
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-flow($flex-flow) {
+  -webkit-flex-flow: $flex-flow;
+  -moz-flex-flow: $flex-flow;
+  -ms-flex-flow: $flex-flow;
+  flex-flow: $flex-flow;
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -ms-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin button--primary {
+  background-color: $btn-primary--bg;
+  color: $btn-primary--color;
+  border-color: $btn-primary--border-color;
+}
+
+@mixin button--secondary {
+  background-color: $btn-secondary--bg;
+  color: $btn-secondary--color;
+  border-color: $btn-secondary--border-color;
+}
+/* === END MIXINS SCSS === */

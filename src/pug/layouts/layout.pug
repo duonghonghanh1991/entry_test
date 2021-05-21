@@ -1,0 +1,32 @@
+include ../mixins/mixins
+
+block variables
+  - var title = 'Entry Test'
+  - var body_class = 'home-page'
+  - var lang = 'en'
+
+doctype
+html(lang= lang)
+  head
+    title #{title}
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="description" content="Template")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0")
+
+    link(rel='stylesheet', href="css/styles.css")
+
+    block styles
+
+  body(class= body_class)
+    include ../sections/header
+
+    main.main(role="main")
+      block content
+
+    include ../sections/footer
+
+    //- script(src="js/libs.js")
+    script(src="js/script.js")
+
+    block scripts

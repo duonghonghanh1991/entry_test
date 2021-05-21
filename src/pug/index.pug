@@ -1,0 +1,29 @@
+extends ./layouts/layout.pug
+
+block variables
+  - var title = "Entry Test"
+  - var body_class = "home-page"
+
+block styles
+
+block content
+  section.large-banner 
+    .container-fluid
+      .section__content 
+        .row
+          .col-12.no-pd
+            +banner-item('assets/images/banner.jpg', 'HAPPYPOINTS')
+
+  section.sub-banner 
+    .container-fluid
+      .section__content 
+        .row.justify-content-center
+          .col-12.col-md-6.no-pd 
+            +banner-item('assets/images/1.jpg', 'happypoints')
+          .col-12.col-md-6.no-pd 
+            +banner-item('assets/images/2.jpg', 'hamsa', 'Technologies')
+          
+  include sections/banner 
+
+block scripts
+    
